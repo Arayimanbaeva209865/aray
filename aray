@@ -1,0 +1,18 @@
+def mix_colors(color1, color2):
+    if (color1 == "red" and color2 == "blue") or (color1 == "blue" and color2 == "red"):
+        return "purple"
+    elif (color1 == "red" and color2 == "yellow") or (color1 == "yellow" and color2 == "red"):
+        return "orange"
+    elif (color1 == "blue" and color2 == "yellow") or (color1 == "yellow" and color2 == "blue"):
+        return "green"
+    else:
+        return "Error: Invalid colors entered."
+
+color1 = input("Введите первый основной цвет (red, blue, yellow): ").lower()
+color2 = input("Введите второй основной цвет (red, blue, yellow): ").lower()
+
+if color1 in ["red", "blue", "yellow"] and color2 in ["red", "blue", "yellow"]:
+    result = mix_colors(color1, color2)
+    print(f"Результат смешивания {color1} и {color2}: {result}")
+else:
+    print("Ошибка: Введите корректные основные цвета (red, blue, yellow).")
